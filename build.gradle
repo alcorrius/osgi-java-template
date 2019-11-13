@@ -39,7 +39,7 @@ dependencies {
 
 jar {
     bnd (
-//            'Bundle-Activator': 'activator'
+            'Bundle-Activator': 'osgi.java.template.Activator'
 //            'Bundle-Name': 'bundle name',
 //            'Bundle-Vendor': 'company name',
 //            'Bundle-Description': 'description',
