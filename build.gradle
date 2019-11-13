@@ -39,7 +39,7 @@ dependencies {
 
 jar {
     bnd (
-            'Bundle-Activator': 'jlib.Activator'
+//            'Bundle-Activator': 'activator'
 //            'Bundle-Name': 'bundle name',
 //            'Bundle-Vendor': 'company name',
 //            'Bundle-Description': 'description',
