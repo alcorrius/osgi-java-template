@@ -9,6 +9,9 @@
 plugins {
     // Apply the java-library plugin to add support for Java Library
     id 'java-library'
+
+    // bndtools
+    id 'biz.aQute.bnd.builder'
 }
 
 repositories {
@@ -24,11 +27,24 @@ dependencies {
     // This dependency is used internally, and not exposed to consumers on their own compile classpath.
     implementation 'com.google.guava:guava:28.0-jre'
 
+    // OSGi Framework
+    implementation 'org.apache.felix:org.apache.felix.framework:6.0.3'
+
     // Use JUnit Jupiter API for testing.
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.5.1'
 
     // Use JUnit Jupiter Engine for testing.
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.5.1'
+}
+
+jar {
+    bnd (
+            'Bundle-Activator': 'jlib.Activator'
+//            'Bundle-Name': 'bundle name',
+//            'Bundle-Vendor': 'company name',
+//            'Bundle-Description': 'description',
+//            'Bundle-DocURL': 'http://'
+    )
 }
 
 test {

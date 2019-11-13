@@ -8,3 +8,12 @@
  */
 
 rootProject.name = 'osgi-java-template'
+
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'biz.aQute.bnd:biz.aQute.bnd.gradle:4.1.0'
+    }
+}
